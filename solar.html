@@ -2,6 +2,9 @@
 <html>
 <head>
   <meta http-equiv="refresh" content="300">
+  <style>
+h1   {font-size: 250px;}
+</style>
   <script>
   function setPower(response) {
     document.getElementById("power").innerHTML = response.overview.currentPower.power;
@@ -14,7 +17,7 @@
 </head>
 <body>
 
-<h1>Current Power</h1>
+<h2>Current Power</h2>
 
 <h1><span id="power">?</span>W</h1>
 
