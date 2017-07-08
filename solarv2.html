@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content="300">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style>
+h1 {font-size: 200px;}
+.wi {font-size:50px;}
+</style>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/weather-icons.min.css">
+     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+/*  function setPower(response) {
+    document.getElementById("power").innerHTML = response.overview.currentPower.power;
+    //document.getElementById("power").innerHTML = response.overview.lastDayData.energy;
+  }
+  var tag = document.createElement("script");
+  tag.src = 'https://monitoringapi.solaredge.com/site/491175/overview.json?api_key=9FINK7NJQ9L7FJEMCD9XQC7D023PVRLJ&callback=setPower';
+  document.getElementsByTagName("head")[0].appendChild(tag)
+  */
+   function setWeather(response) {
+     var readings = response.list;
+     var description = readings[0].weather[0].description;
+    document.getElementById("weather").innerHTML = description;
+    //document.getElementById("power").innerHTML = response.overview.lastDayData.energy;
+  }
+  var tag = document.createElement("script");
+  tag.src = 'http://api.openweathermap.org/data/2.5/forecast?id=2639577&appid=ddf516c1574cf3cbd1c51c50a6ca0775&cnt=1&callback=setWeather';
+  document.getElementsByTagName("head")[0].appendChild(tag)
+  
+  </script>
+</head>
+<body>
+
+
+
+<div class="jumbotron">
+  <p>Current Solar Power</p>
+  <h1 class="display-3"><span id="power">?</span>W</h1>
+</div>
+
+<div class="jumbotron">
+  <p>Weather Today</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+       <div class="row"><i class="wi wi-day-sunny"></i></div>
+       <div class="row">9am</div>
+      </div>
+            <div class="col-2">
+       <div class="row"><i   class="wi wi-day-cloudy"></i></div>
+       <div class="row">midday</div>
+      </div>
+            <div class="col-2">
+       <div class="row"><i   class="wi wi-day-rain"></i></div>
+       <div class="row">3pm</div>
+      </div>
+            <div class="col-2">
+       <div class="row"><i   class="wi wi-cloud"></i></div>
+       <div class="row">6pm</div>
+      </div>
+  </div>
+</div>
+
+
+
+
+ 
+</body>
+</html>
+
+
+

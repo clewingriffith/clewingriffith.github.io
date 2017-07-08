@@ -1,0 +1,7 @@
+open weather api reading city id 2639577
+http://samples.openweathermap.org/data/2.5/forecast?id=524901&appid=b1b15e88fa797225412429c1c50c122a1
+ddf516c1574cf3cbd1c51c50a6ca0775
+
+api.openweathermap.org/data/2.5/forecast?id=524901&appid=ddf516c1574cf3cbd1c51c50a6ca0775
+
+http://api.openweathermap.org/data/2.5/weather?id=2639577&appid=ddf516c1574cf3cbd1c51c50a6ca0775
